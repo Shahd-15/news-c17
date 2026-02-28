@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news_c17/core/remote/api/api_manager.dart';
-import 'package:news_c17/core/resources/app_constants.dart';
 import 'package:news_c17/core/resources/colors_manager.dart';
 import 'package:news_c17/model/category_model.dart';
 import 'package:news_c17/ui/articles/widget/articles_list.dart';
 
-import '../../../model/sources_response/Source.dart';
+import '../../../model/sources_response/source.dart';
 
 class ArticlesScreen extends StatefulWidget {
-  CategoryModel category;
-  ArticlesScreen(this.category);
+  final CategoryModel category;
+  const ArticlesScreen(this.category, {super.key});
 
   @override
   State<ArticlesScreen> createState() => _ArticlesScreenState();

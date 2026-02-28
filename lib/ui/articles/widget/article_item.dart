@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news_c17/core/resources/colors_manager.dart';
 
-import '../../../model/articles_response/Article.dart';
+import 'package:news_c17/core/resources/routes_manager.dart';
+
+import '../../../model/articles_response/article.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
 class ArticleItem extends StatelessWidget {
@@ -13,7 +15,15 @@ class ArticleItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(
+          context,
+          RoutesManager.articleDetails,
+          arguments: article,
+        );
+      },
+      child: Container(
       padding: REdgeInsets.all(8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16.r),
@@ -57,6 +67,7 @@ class ArticleItem extends StatelessWidget {
           ),
         ],
       ),
+    ),
     );
   }
 }

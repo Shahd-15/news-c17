@@ -1,11 +1,12 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:news_c17/core/resources/app_constants.dart';
-import 'package:news_c17/model/articles_response/Articles_response.dart';
-import 'package:news_c17/model/sources_response/Sources_response.dart';
+import 'package:news_c17/model/articles_response/articles_response.dart';
+import 'package:news_c17/model/sources_response/sources_response.dart';
 
 class ApiManager {
   static late Dio dio;
-  static init(){
+  static void init(){
     dio = Dio(
         BaseOptions(
             baseUrl: AppConstants.baseUrl

@@ -41,4 +41,44 @@ class AppTheme {
       )
     )
   );
+
+  static ThemeData darkTheme = ThemeData(
+    appBarTheme: AppBarTheme(
+      backgroundColor: Colors.transparent,
+      centerTitle: true,
+      titleTextStyle: TextStyle(
+        fontSize: 20.sp,
+        color: ColorsManager.darkPrimaryColor,
+        fontWeight: FontWeight.w500
+      ),
+    ),
+    colorScheme: ColorScheme.dark(
+      primary: ColorsManager.darkPrimaryColor,
+      secondary: ColorsManager.darkSecondaryColor,
+      onSecondary: ColorsManager.greyColor,
+      onPrimaryContainer: ColorsManager.darkSecondaryColor
+    ),
+    dividerTheme: DividerThemeData(
+      color: ColorsManager.darkSecondaryColor,
+      thickness: 1.h,
+    ),
+    scaffoldBackgroundColor: ColorsManager.darkSecondaryColor,
+    textTheme: TextTheme(
+      headlineMedium: TextStyle(
+        color: ColorsManager.darkPrimaryColor,
+        fontSize: 24.sp,
+        fontWeight: FontWeight.w700
+      ),
+      labelMedium: TextStyle(
+        fontSize: 20.sp,
+        fontWeight: FontWeight.w700,
+        color: ColorsManager.darkSecondaryColor
+      ),
+      titleSmall: TextStyle(
+        fontSize: 12.sp,
+        color: ColorsManager.greyColor,
+        fontWeight: FontWeight.w500
+      )
+    )
+  );
 }

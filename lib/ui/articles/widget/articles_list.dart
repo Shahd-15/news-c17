@@ -3,11 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news_c17/core/remote/api/api_manager.dart';
 import 'package:news_c17/ui/articles/widget/article_item.dart';
 
-import '../../../model/articles_response/Article.dart';
+import '../../../model/articles_response/article.dart';
 
 class ArticlesList extends StatelessWidget {
-  String sourceId;
-  ArticlesList(this.sourceId);
+  final String sourceId;
+  const ArticlesList(this.sourceId, {super.key});
 
   @override
   Widget build(BuildContext context) {
